@@ -1,0 +1,254 @@
+/* === Color Variables === */
+:root {
+    --primary-color: #1a73e8; 
+    --secondary-color: #333;   
+    --text-light: #555;        
+    --background-color: #f4f4f4; 
+    --card-background: #fff;      
+    --accent-color:  #555;      
+}
+
+/* === Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* === Resume Container === */
+.resume-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: var(--card-background);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* === Header === */
+.resume-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.resume-header h1 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.resume-header h1:hover {
+    color: var(--accent-color);
+}
+
+.resume-header p {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+/* === Two Columns Layout === */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* === Resume Sections === */
+.resume-section {
+    margin-bottom: 25px;
+}
+.education-section h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+}
+
+.education-section .edu-item {
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.resume-section ul li i {
+    margin-right: 8px;   /* space between icon and text */
+    color: #000;         /* black icons */
+    width: 20px;         /* align icons neatly */
+    text-align: center;
+}
+/* === Header Styles === */
+.resume-header {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between image and text */
+    padding: 20px 30px;
+    background: #1a73e8; /* Blue background */
+    color: #fff; /* White text for contrast */
+    border-radius: 12px 12px 0 0; /* Rounded top corners (optional) */
+}
+
+.header-left {
+    flex-shrink: 0;
+}
+
+.header-image {
+    width: 200px;       /* adjust as needed */
+    height: 200px;      /* keep square */
+    border-radius: 50%; /* circular image */
+    object-fit: cover;  /* ensures image fills circle */
+    border: 3px solid #1a73e8; /* optional border */
+}
+
+.header-right h1 {
+    font-size: 42px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-left: 110px;
+}
+
+.header-right p {
+    font-size: 20px;
+    color: #2a2929;
+    margin: 0;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .resume-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+.education-section .edu-item::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+}
+
+.education-section .edu-item-detail {
+    font-weight: 400;
+    color: var(--text-light);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+
+
+.resume-section h2 {
+    font-size: 20px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+}
+
+.resume-section h3 {
+    font-size: 16px;
+    color: var(--secondary-color);
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.resume-section ul {
+    list-style: none;
+}
+
+.resume-section ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 18px;
+    color: var(--text-light);
+}
+
+.resume-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.resume-section a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resume-section a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* === Skills Section === */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--secondary-color);
+}
+
+.progress {
+    background: #e0e0e0;
+    height: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 8px;
+    line-height: 20px;
+    border-radius: 12px;
+    transition: width 1.5s ease-in-out;
+}
+
+.progress-bar:hover {
+    background: var(--accent-color);
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === Print Friendly === */
+@media print {
+    body { background: #fff; color: #000; }
+    .resume-container { margin: 0; box-shadow: none; border-radius: 0; padding: 15px; }
+    .progress-bar { color: #000; width: auto; }
+}
