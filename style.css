@@ -102,6 +102,34 @@ body {
     flex-shrink: 0;
 }
 
+.demo-btn, .github-btn {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.demo-btn {
+    background-color: #28a745;
+}
+
+.demo-btn:hover {
+    background-color: #218838;
+}
+
+.github-btn {
+    background-color: #333;
+}
+
+.github-btn:hover {
+    background-color: #000;
+}
+
 .header-image {
     width: 200px;       /* adjust as needed */
     height: 200px;      /* keep square */
